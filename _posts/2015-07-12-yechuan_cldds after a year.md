@@ -12,9 +12,8 @@ lang: zh
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/qVCSzszMYEA" frameborder="0" allowfullscreen></iframe></center>
 
-<strike><未完待续></strike>
 
-##只愿往事不再重演
+## 只愿往事不再重演
 
 第一次表演是在小学三年级。
 
