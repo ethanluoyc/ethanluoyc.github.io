@@ -10,7 +10,7 @@ I was starting to prepare this year's birthday gift for someone, I find Low Poly
 ## Background
 A [question](http://www.zhihu.com/question/29856775) on 知乎 already suggests how low-poly images can be rendered. In fact, this is the discussion that has inspired me to create one of my own, with Python, of course. I recommend you to take a look at this post as some of the points made are also adopted by my implementation.
 
-I looked into [羡辙's](https://github.com/Ovilia/Polyvia) anwser, she uses WebGL with Three.js to accomplish the task. I am not a graphics person so WebGL. But there are rooms of improvement in the algorithm that she implemented. In fact, I find the quality of her rendered images less satisfactory compared to [盖孟]() who also answered the question. 盖孟's answer suggests ways which we can optimize the arrangement of the vertices in the Delaunay triangulation. I couldn't access his paper but I think he used the [Lloyd's algorithm](https://en.wikipedia.org/wiki/Lloyd's_algorithm) to space out the vertices first identified in edge extraction. Scipy has some function that uses Qhull for spatial calculation of the Delaunay triangles and Voronoi Diagrams. It does not however include the Lloyd algorithm tailored to our specific task. So I implemented one of my own. I used the horse image found on 羡辙's' [blog](http://zhangwenli.com/Polyvia/image.html) as benchmark, it is under public domain.
+I looked into [羡辙's](https://github.com/Ovilia/Polyvia) answer, she uses WebGL with Three.js to accomplish the task. I am not a graphics person so WebGL. But there are rooms of improvement in the algorithm that she implemented. In fact, I find the quality of her rendered images less satisfactory compared to [盖孟]() who also answered the question. 盖孟's answer suggests ways which we can optimize the arrangement of the vertices in the Delaunay triangulation. I couldn't access his paper but I think he used the [Lloyd's algorithm](https://en.wikipedia.org/wiki/Lloyd's_algorithm) to space out the vertices first identified in edge extraction. Scipy has some function that uses Qhull for spatial calculation of the Delaunay triangles and Voronoi Diagrams. It does not however include the Lloyd algorithm tailored to our specific task. So I implemented one of my own. I used the horse image found on 羡辙's' [blog](http://zhangwenli.com/Polyvia/image.html) as benchmark, it is under public domain.
 
 ![Start coding! Some initial progress I made](https://farm1.staticflickr.com/631/21972752350_f787f7bf81_b.jpg)  
 
@@ -29,7 +29,7 @@ The second one looks slightly better after the Lloyd relaxation. Take a look at 
 
 ![Maybe it will look great just by having fewer vertices?](https://farm6.staticflickr.com/5742/21973225448_98b8319ff8_b.jpg)
 
-This figure looks better than the aforementioned two figures. Why? For simple reason that it uses fewer veritices. This has promted me to think that whether our defined number of vertices is appropriate. Some of the vertices we randomly choose may live in close proximity and may as well be merged into a single vertex. This is the motivation behind my using K-means to cluster the selected points into fewer number of vertices.
+This figure looks better than the aforementioned two figures. Why? For simple reason that it uses fewer vertices. This has prompted me to think that whether our defined number of vertices is appropriate. Some of the vertices we randomly choose may live in close proximity and may as well be merged into a single vertex. This is the motivation behind my using K-means to cluster the selected points into fewer number of vertices.
 
 One arises when we want to do this: Fewer vertices but how many is considered "fewer"?
 
@@ -37,8 +37,7 @@ One arises when we want to do this: Fewer vertices but how many is considered "f
 
 
 
-I have uploaded my implementation onto Github. PRs are welcome and porting to other languages is also welcome. This is just a piece of code I write in order to familiarize myself to computer vision and machine learnig in image processing so please feel free to use it.
+I have uploaded my implementation onto Github. PRs are welcome and porting to other languages is also welcome. This is just a piece of code I write in order to familiarize myself to computer vision and machine learning in image processing so please feel free to use it.
 
-I don't know why I cannot upload this
 
 Yeah so this is it so far.
