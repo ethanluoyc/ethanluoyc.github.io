@@ -1,6 +1,6 @@
 ---
 layout: post
-title: On Low-Poly Rendering
+title: Low-Poly Rendering
 lang: en
 ---
 
