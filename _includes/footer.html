@@ -2,7 +2,7 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+      <!-- <h2 class="footer-heading">{{ site.title }}</h2> -->
 
     <div class="footer-col-wrapper">
         <!-- <div class="footer-col footer-col-1"> -->
@@ -25,12 +25,15 @@
             {% include icon-twitter.html username=site.twitter_username %}
           </li>
           {% endif %}
+	  <li>
+	  <p class="rss-subscribe">subscribe <a href="{{ " /feed.xml " | prepend: site.baseurl }}">via RSS</a></p>
+	  </li>
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
-        <p>{{ site.description }}</p>
-      </div>
+      <!-- <div class="footer-col footer-col-3">
+           <p>{{ site.description }}</p>
+	   </div> -->
     </div>
 
   </div>

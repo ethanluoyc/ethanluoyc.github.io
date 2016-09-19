@@ -100,7 +100,9 @@
  */
 .site-footer {
     border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
+    width: 100%;
+    bottom: 0;
+    padding-top: 20px;
 }
 
 .footer-heading {
@@ -170,6 +172,7 @@
  */
 .page-content {
     padding: $spacing-unit 0;
+    min-height: 75%;
 }
 
 .page-heading {
@@ -211,7 +214,7 @@
     &:hover {
         // background: #424242;
         // color: white;
-        color: $grey-color;
+        // color: $grey-color;
         text-decoration: none;
     }
 }
@@ -253,8 +256,8 @@
         border-left: 5px solid $yicheng-green;
         position: absolute;
         left: -15px;
-        height: 75%;
-        top: 12%;
+        height: 60%;
+        top: 18%;
     }
 
     h3 {
